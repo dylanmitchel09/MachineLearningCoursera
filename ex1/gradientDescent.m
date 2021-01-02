@@ -18,9 +18,11 @@ for iter = 1:num_iters
     %
 
 
+    predictions = X * theta;
+    
+    update = X' * (predictions - y);
 
-
-
+    theta = theta - alpha * (1/m) * update;
 
 
     % ============================================================
